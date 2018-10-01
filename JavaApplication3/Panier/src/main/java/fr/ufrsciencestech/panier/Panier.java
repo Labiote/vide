@@ -86,6 +86,10 @@ public class Panier {
         {
             this.contenu.add(o);
         }
+        else
+        {
+            System.out.println("Depassement de la taille maximum autorisee du panier...");
+        }
     }
     
     /**
