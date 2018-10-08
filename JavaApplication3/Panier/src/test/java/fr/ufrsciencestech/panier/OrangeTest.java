@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.ufrsciencestech.tp;
+package fr.ufrsciencestech.panier;
 
-import Modele.Orange;
+//import Modele.Orange;
 import junit.framework.TestCase;
 
 /**
  *
- * @author pc744913
+ * @author fb564351
  */
 public class OrangeTest extends TestCase {
     

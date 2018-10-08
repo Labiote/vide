@@ -1,4 +1,4 @@
-package fr.ufrsciencestech.tp;
+package fr.ufrsciencestech.panier;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
