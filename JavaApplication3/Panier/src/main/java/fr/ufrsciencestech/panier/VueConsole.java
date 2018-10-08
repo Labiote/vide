@@ -10,14 +10,14 @@ import java.util.Observer;
 
 /**
  *
- * @author sc364347
+ * @author fb564351
  */
 public class VueConsole implements Observer{
     
     @Override
     public void update(Observable o, Object arg) {
         Panier p=(Panier)o;
-        System.out.println(("Nombre d'orange"+((Integer)p.getSize()).toString()));
+        System.out.println(("Nombre d'orangeov "+((Integer)p.getSize()).toString()));
     }
     
 }

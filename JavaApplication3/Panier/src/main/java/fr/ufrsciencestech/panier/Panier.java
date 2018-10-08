@@ -10,7 +10,7 @@ import java.util.Observable;
 
 /**
  *
- * @author sc364347
+ * @author fb564351
  */
 public class Panier extends Observable {
     private ArrayList<Orange> liste;
