@@ -13,8 +13,25 @@ import java.util.Observable;
  */
 public class Macedoine extends Observable {
     private ArrayList<Fruit> ingredient;
+    private String nom;
 
-    public Macedoine(){
-        ing
+    public Macedoine(String n){
+        this.nom=n;
+        this.ingredient= new ArrayList<Fruit>();
+    }
+    public void putFruit(Fruit o){
+        getListe().add(o);
+        setChanged();
+        notifyObservers();
+    }
+    public ArrayList<Fruit> getListe() {
+        return ingredient;
+    }
+    public String toString(){
+        String str="Voici un macédoine "+ nom+" elle contient :";
+        for(int i=0 ; i<getListe().size(); i++ ){
+            str+=","+getListe().get(i);
+        }
+        return str;
     }
 }
