@@ -5,6 +5,8 @@
  */
 package fr.ufrsciencestech.panier;
 
+import Modele.Panier;
+import Modele.Orange;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;

@@ -5,6 +5,7 @@
  */
 package fr.ufrsciencestech.panier;
 
+import Modele.Orange;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

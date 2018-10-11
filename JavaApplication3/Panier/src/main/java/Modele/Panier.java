@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package fr.ufrsciencestech.panier;
+package Modele;
 import java.util.ArrayList;
 import java.util.Observable;
 
