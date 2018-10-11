@@ -34,4 +34,11 @@ public class Macedoine extends Observable {
         }
         return str;
     }
+    public boolean isSeedless(){
+        boolean res=true;
+        for(int i=0 ; i<getListe().size(); i++ ){
+            res&=getListe().get(i).pepin;
+        }
+        return res;
+    }
 }
