@@ -1,10 +1,10 @@
-package Modele;
+package fr.ufrsciencestech.panier.Modele;
 
-import Controller.Controler;
-import Modele.Orange;
-import Modele.Panier;
-import View.VueConsole;
-import View.VueGswing;
+import fr.ufrsciencestech.panier.Controller.Controler;
+import fr.ufrsciencestech.panier.Modele.Orange;
+import fr.ufrsciencestech.panier.Modele.Panier;
+import fr.ufrsciencestech.panier.View.VueConsole;
+import fr.ufrsciencestech.panier.View.VueGswing;
 
 /**
  * Hello world!
