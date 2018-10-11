@@ -5,65 +5,176 @@
  */
 package fr.ufrsciencestech.panier;
 
-//import Modele.*;
-import java.util.Vector;
-import junit.framework.TestCase;
-import junit.*;
+import java.util.ArrayList;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 /**
  *
- * @author fb564351
+ * @author sc364347
  */
-public class PanierTest extends TestCase {
+public class PanierTest {
     
-    private Orange o, o1, o2;
-    private Panier p1, p2;
+    Panier pvide,p1,p2,pplein;
+    Orange o1,o2,o3;
     
-    public PanierTest(String testName) {
-        super(testName);
+    public PanierTest(){
+    }
+    @BeforeClass
+    public static void setUpClass()  {
+       
+       
     }
     
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-        p1 = new Panier(1);
-        p2 = new Panier(2);
-        o = new Orange((float)0.5, "France");
-        o1 = new Orange((float)0.8, "Madagascar");
-        o2 = new Orange((float)0.7, "Espagne");
+    @AfterClass
+    public static void tearDownClass() {
     }
     
-    @Override
-    protected void tearDown() throws Exception {
-        super.tearDown();
+    @Before
+    public void setUp() {
+        pvide = new Panier (4);
+       p1 = new Panier (4);
+       p2 = new Panier (4);
+       pplein = new Panier (4);
+       o1 =  new Orange (1.5, "Espagne");
+       o2 =  new Orange (2.5, "Espagne");
+       o3 =  new Orange (1.5, "Italie");
+       p1.putOrange(o1);
+       p2.putOrange(o1);
+       pplein.putOrange(o1);
+       pplein.putOrange(o1);
+       pplein.putOrange(o2);
+       pplein.putOrange(o3);
+       
     }
     
-    public void testToString()
-    {
-        String a = p1.toString();
-        assertFalse(a.isEmpty());
+    @After
+    public void tearDown() {
     }
+
+    /**
+     * Test of estPlein method, of class Panier.
+     */
     @Test
-    public void testAjoutPanierVide() throws PanierPleinException{
-        assertTrue(p1.estVide());
-        p1.putOrange(o);
-        assertFalse(p1.estVide());
+    public void testEstPlein() {
+        System.out.println("estPlein");
+        boolean expResult = true;
+        boolean result = pplein.estPlein();
+        assertEquals(expResult, result);
     }
+
+
+    /**
+     * Test of getPrix method, of class Panier.
+     */
     @Test
-    public void testAjoutPanierPlein() throws PanierPleinException{
-        try
-        {
-            p1.putOrange(o);
-            p1.putOrange(o2);
-            fail("");
-        }catch(PanierPleinException e){ System.out.println("osef");}
+    public void testGetPrix() {
+        System.out.println("getPrix");
+        double expResult = 1.5;
+        double result = p1.getPrix();
+        assertEquals(expResult, result, 0.0);
+    }
+
+    /**
+     * Test of getSize method, of class Panier.
+     */
+    @Test
+    public void testGetSize() {
+        System.out.println("getSize");
+        int expResult = 1;
+        int result = p1.getSize();
+        assertEquals(expResult, result);
+ 
+    }
+
+    /**
+     * Test of retire method, of class Panier.
+     */
+    @Test
+    public void testRetire() {
+        System.out.println("retire");
+        Panier instance = null;
+        instance.retire();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of estVide method, of class Panier.
+     */
+    @Test
+    public void testEstVide() {
+        System.out.println("estVide");
+        boolean expResult = true;
+        boolean result = pvide.estVide();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of Equals method, of class Panier.
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("Equals");
+        boolean expResult = true;
+        boolean result = p1.Equals(p2);
+        assertEquals(expResult, result);
+
+    }
+
+    /**
+     * Test of boycotte method, of class Panier.
+     */
+    @Test
+    public void testBoycotte() {
+        System.out.println("boycotte");
+        String str = "";
+        Panier instance = null;
+        instance.boycotte(str);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of toString method, of class Panier.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("toString");
+        Panier instance = null;
+        String expResult = "";
+        String result = instance.toString();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getListe method, of class Panier.
+     */
+    @Test
+    public void testGetListe() {
+        System.out.println("getListe");
+        ArrayList<Orange> expResult = new ArrayList<Orange>();
+        ArrayList<Orange> result = pvide.getListe();
+        assertEquals(true, result.equals(expResult));
     }
     
-//    public void testBoycotteOriginePanierVide(){
-//        p2.boycotteOrigine("France");
-//        assertTrue(p2.estVide());
-//    }
-    
+    @Test 
+    public void testPrixPanierA2Orange(){
+        Orange omock1=mock (Orange.class);
+        Orange omock2=mock (Orange.class);
+        when ( omock1.getPrix()).thenReturn (1.0);
+        when ( omock2.getPrix()).thenReturn (2.0);
+        pvide.putOrange(omock1);
+        pvide.putOrange(omock2);
+        assertTrue (pvide.getPrix()==3.0);
+        verify(omock1,times(1)).getPrix();
+    }
     
 }
