@@ -7,11 +7,11 @@ package fr.ufrsciencestech.panier.Modele;
 
 /**
  *
- * @author sc364347
+ * @author ar948052
  */
-public class Orange extends Fruit {
-    
-    public Orange(double p,String str){
+public class Cerise extends Fruit{
+
+    public Cerise(double p,String str){
         super(p,str);
     }
     
@@ -22,6 +22,6 @@ public class Orange extends Fruit {
 
     @Override
     public String getFruit() {
-        return "Orange";
+        return "Cerise";
     }
 }
