@@ -20,6 +20,7 @@ public class Orange {
         this.prix=p;
         this.origine=str;
     }
+    
 
     /**
      * @return the prix
