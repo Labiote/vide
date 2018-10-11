@@ -14,7 +14,7 @@ import javax.swing.*;
 
 /**
  *
- * @author sc364347
+ * @author jd790080
  */
 public class Controler implements ActionListener{
     private Panier p;
@@ -23,7 +23,7 @@ public class Controler implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         JButton b=(JButton)e.getSource();
         if(b.equals(vue.getjButton2())){
-            p.putOrange(new Orange(1,"A mort le MVC"));
+            p.putOrange(new Orange(1,"Allemagne"));
         }
         if(b.equals(vue.getjButton3())){
             p.retire();
