@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 package fr.ufrsciencestech.panier.Modele;
+import java.util.ArrayList;
+import java.util.Observable;
 
 /**
  *
- * @author jd790080
+ * @author gd238947
  */
-public abstract class Fruit {
-    
-    public Fruit(){};
-    
-    public abstract double getPrix();
-    public abstract String getOrigine();
-    public  abstract boolean equals(Orange o);
-    
+public class Macedoine extends Observable {
+    private ArrayList<Fruit> ingredient;
+
+    public Macedoine(){
+        ing
+    }
 }
