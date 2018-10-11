@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package fr.ufrsciencestech.panier.Controller;
 
-import Modele.Panier;
-import Modele.Orange;
-import View.VueGswing;
+import fr.ufrsciencestech.panier.Modele.Panier;
+import fr.ufrsciencestech.panier.Modele.Orange;
+import fr.ufrsciencestech.panier.View.VueGswing;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;

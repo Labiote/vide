@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package fr.ufrsciencestech.panier.View;
 
-import Modele.Panier;
+import fr.ufrsciencestech.panier.Modele.Panier;
 import java.util.Observable;
 import java.util.Observer;
 
