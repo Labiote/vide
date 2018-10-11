@@ -9,9 +9,8 @@ package Modele;
  *
  * @author jd790080
  */
-public class PanierPleinException{
-    
-    public PanierPleinException() {
+public class PanierVideException {
+    public PanierVideException() {
         System.out.println("Error");
     }
 }
