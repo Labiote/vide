@@ -13,6 +13,7 @@ public class Orange extends Fruit {
     
     public Orange(double p,String str){
         super(p,str);
+        this.pepin = false;
     }
     
     @Override
