@@ -45,7 +45,7 @@ public abstract class Fruit {
     
     public abstract String getFruit();
     
-    public boolean equals(Fruit f) {
+    public boolean Equals(Fruit f) {
        if( f.getFruit().equals(this.getFruit()) && f.getPrix()==this.prix && f.getOrigine().equals(this.origine)){
            return true;
        }

@@ -13,6 +13,7 @@ public class Cerise extends Fruit{
 
     public Cerise(double p,String str){
         super(p,str);
+        this.pepin = true;
     }
     
     @Override

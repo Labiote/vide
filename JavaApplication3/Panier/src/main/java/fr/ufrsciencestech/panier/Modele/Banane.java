@@ -13,6 +13,7 @@ public class Banane extends Fruit{
 
     public Banane(double p,String str){
         super(p,str);
+        this.pepin = false;
     }
     
     @Override
